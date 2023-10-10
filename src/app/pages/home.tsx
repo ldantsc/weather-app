@@ -12,44 +12,35 @@ export default function Home() {
   const [submitValue, setSubmitValue] = useState('');
   const [temperatures, setTemperatures] = useState(null);
 
-  
+
   useEffect(() => {
+
     const timer = setTimeout(() => {
       setSubmitValue(cityValue);
     }, 2000);
     return () => clearTimeout(timer);
   }, [cityValue]);
-  
+
   useEffect(() => {
-    // Dentro deste useEffect, faça a chamada à API e atualize o estado de temperatures
+
     const api = new WeatherApi(submitValue);
     api.temperatures()
-    .then((data: any) => {
-      // Quando os dados estiverem prontos, atualize o estado
-      setTemperatures(data);
-    })
-    .catch((error) => {
-        // Lida com erros aqui, se houver algum
+      .then((data: any) => {
+        setTemperatures(data);
+      })
+      .catch((error) => {
         console.error('Erro:', error);
       });
-    }, [submitValue]);
+  }, [submitValue]);
 
-    const dataWeather = {
-      city: temperatures?.city,
-      temp: temperatures?.temperature.toFixed(0),
-      min: temperatures?.minTemperature.toFixed(0),
-      max: temperatures?.maxTemperature.toFixed(0),
-      describe: temperatures?.weather,
-    }
-    
-    return (
-      <main id="container-main" className="w-screen h-screen grid grid-cols-1 md:scale-1">
+  return (
+    <main id="container-main" className="w-screen h-screen grid grid-cols-1 md:scale-1">
       <div id="container-header">
         <Search value={cityValue} event={function event(e: any) { setCityValue(e.target.value) }} />
       </div>
       <div id="container-weather" className="row-span-1">
         {temperatures && typeof temperatures === 'object' && 'city' in temperatures && (
-          <Weather data={dataWeather}/>
+          <Weather data={temperatures} />
         )}
       </div>
       <div id="container-footer">
