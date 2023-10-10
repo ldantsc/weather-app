@@ -13,6 +13,13 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        'lato': ['--font-lato'],
+      },
+      scale: {
+        '65': '0.63',
+        '70': '0.68',
+      }
     },
   },
   plugins: [],

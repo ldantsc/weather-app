@@ -8,11 +8,18 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: white) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --font-color-default: #1E1E1E;
+  }
+}
+
+@layer base {
+  html {
+    font-family: "--font-lato";
   }
 }
 
@@ -24,4 +31,17 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+main {
+  background-color: #EDEDED;
+}
+
+span {
+  font-family: "-font-lato";
+  font-weight: 800;
+}
+
+h1, h2, h3, p {
+  color: var(--font-color-default);
 }
