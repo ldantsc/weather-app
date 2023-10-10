@@ -20,7 +20,7 @@ export class WeatherApi {
     /* Função de coordenadas que retorna latitude e longitude */
 
     async getCoordinates() {
-        const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${this._city}&limit=1&appid=${this._key}&lang={pt_br}`);
+        const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${this._city}&limit=1&appid=${this._key}&lang={pt_br}`);
         const coordinates = await response.json();
 
         /*se as coordenadas não foram definidas pelo usuário a api retornara bad request 400, 
@@ -28,7 +28,7 @@ export class WeatherApi {
 
         if (coordinates.cod === "400") {
             const localResult: any = await userLocale()
-            const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${localResult.city}&limit=1&appid=${this._key}&lang={pt_br}`)
+            const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${localResult.city}&limit=1&appid=${this._key}&lang={pt_br}`)
             const coordinates = await response.json();
 
             interface LocalCoordinates {
