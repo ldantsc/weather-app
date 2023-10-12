@@ -60,9 +60,19 @@ export class WeatherApi {
         return localCoordinates;
     }
 
-    /* Dados ja convertidos de temperaturas */
+    /*OpenWeather Air Poluition API*/
+
+    async airPollutionData() {
+        const coordinates = await this.getCoordinates()
+        const response = await fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=${this._key}`);
+        const data = await response.json();
+        return data.list[0];
+    }
+
+    /* Dados convertidos de temperaturas */
 
     async temperatures() {
+        const airCondition = await this.airPollutionData();
         const coordinates = await this.getCoordinates();
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=${this._key}`);
         const localTemperatures = await response.json();
@@ -79,6 +89,7 @@ export class WeatherApi {
             feelsLike: number;
             minTemperature: number;
             maxTemperature: number;
+            airPollution: number;
         }
 
         const temperatures: Temperatures = {
@@ -93,8 +104,10 @@ export class WeatherApi {
             feelsLike: this.convertTemperatureFahrenheitToCelsius(localTemperatures.main.feels_like),
             minTemperature: this.convertTemperatureFahrenheitToCelsius(localTemperatures.main.temp_min),
             maxTemperature: this.convertTemperatureFahrenheitToCelsius(localTemperatures.main.temp_max),
+            airPollution: airCondition.main.aqi
         }
 
         return temperatures;
+
     }
-}
+};

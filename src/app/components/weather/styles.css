@@ -4,3 +4,14 @@
         -6px -6px 11.70828px 0px #FFF, 6px -6px 12px 0px rgba(212, 212, 212, 0.20),
         -6px 6px 12px 0px rgba(212, 212, 212, 0.20)
 }
+
+#describe-weather {
+    position: relative;
+}
+
+.pollution-status {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: var(--background-air-pollution);
+}

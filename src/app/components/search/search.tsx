@@ -1,8 +1,6 @@
 import { motion } from "framer-motion"
 import './styles.css'
 
-
-
 export default function Search(props: any) {
 
     return (
