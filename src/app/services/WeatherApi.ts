@@ -64,7 +64,7 @@ export class WeatherApi {
 
     async airPollutionData() {
         const coordinates = await this.getCoordinates()
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=${this._key}`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=${this._key}`);
         const data = await response.json();
         return data.list[0];
     }
