@@ -1,4 +1,4 @@
-# Weather Project
+<h1 align="center">Weather Project</h1>
 
 Venho apresentar um projeto que criei, um simples Widget de previsão do tempo, que nos da algumas das informações que irei mencionar abaixo:
 
