@@ -1,11 +1,16 @@
 export async function userLocale(): Promise<unknown> {
     return new Promise((resolve, reject) => {
+
         // Verifica se o navegador suporta a API de Geolocalização
+
         if ("geolocation" in navigator) {
+
             // Obtém as coordenadas do usuário
+
             navigator.geolocation.getCurrentPosition(
                 async function (position) {
-                    /*api do google de geolocalização reversa*/
+
+                    /* Google Geolocation API Reverse */
 
                     const apiGoogleKey = "AIzaSyBdmcdipKvU6LDZkcTajnSLp7l3pq1D3mQ"
                     const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&result_type=administrative_area_level_1&key=${apiGoogleKey}`);

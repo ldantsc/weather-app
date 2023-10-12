@@ -13,35 +13,27 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-    --font-color-default: #1E1E1E;
+    --font-color-default: #d3d3d3;
   }
 }
 
-@layer base {
-  html {
-    font-family: "--font-lato";
-  }
-}
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 main {
   background-color: #EDEDED;
 }
 
-span {
-  font-family: "-font-lato";
-  font-weight: 800;
-}
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p,
+span {
   color: var(--font-color-default);
 }

@@ -18,26 +18,30 @@ export class WeatherApi {
     };
 
     /* Função de coordenadas que retorna latitude e longitude */
+    /* OpenWeather API */
 
     async getCoordinates() {
+
+        interface LocalCoordinates {
+            city: string;
+            state: string
+            latitude: number;
+            longitude: number;
+        }
+
         const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${this._city}&limit=1&appid=${this._key}&lang={pt_br}`);
-        const coordinates = await response.json();
+        var coordinates = await response.json();
 
-        /*se as coordenadas não foram definidas pelo usuário a api retornara bad request 400, 
-        sendo assim utilizar as coordenadas de localização do user */
+        /* Coordenadas não foi definidas pelo user a API retornara bad request 400,
+        utilizar as coordenadas de localização do user - Google Reverse Geolocation-API */
 
-        if (coordinates.cod === "400") {
+        if (coordinates.cod === 400) {
             const localResult: any = await userLocale()
             const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${localResult.city}&limit=1&appid=${this._key}&lang={pt_br}`)
             const coordinates = await response.json();
 
-            interface LocalCoordinates {
-                city: string;
-                latitude: number;
-                longitude: number;
-            }
-
             const localCoordinates: LocalCoordinates = {
+                state: coordinates[0].state,
                 city: coordinates[0].name,
                 latitude: coordinates[0].lat,
                 longitude: coordinates[0].lon
@@ -46,20 +50,14 @@ export class WeatherApi {
             return localCoordinates;
         }
 
-        interface LocalCoordinates {
-            city: string;
-            latitude: number;
-            longitude: number;
-        }
-
         const localCoordinates: LocalCoordinates = {
             city: coordinates[0].name,
+            state: coordinates[0].state,
             latitude: coordinates[0].lat,
             longitude: coordinates[0].lon
         };
 
         return localCoordinates;
-
     }
 
     /* Dados ja convertidos de temperaturas */
@@ -70,9 +68,12 @@ export class WeatherApi {
         const localTemperatures = await response.json();
 
         interface Temperatures {
+            state: string;
             city: string;
+            icon: string
             weather: string;
             weatherDescription: string;
+            time: number
             humidity: number;
             temperature: number;
             feelsLike: number;
@@ -81,16 +82,18 @@ export class WeatherApi {
         }
 
         const temperatures: Temperatures = {
+            state: coordinates.state,
             city: coordinates.city,
+            icon: localTemperatures.weather[0].icon,
             weather: localTemperatures.weather[0].main,
             weatherDescription: localTemperatures.weather[0].description,
+            time: localTemperatures.timezone,
             humidity: localTemperatures.main.humidity,
             temperature: this.convertTemperatureFahrenheitToCelsius(localTemperatures.main.temp),
             feelsLike: this.convertTemperatureFahrenheitToCelsius(localTemperatures.main.feels_like),
             minTemperature: this.convertTemperatureFahrenheitToCelsius(localTemperatures.main.temp_min),
             maxTemperature: this.convertTemperatureFahrenheitToCelsius(localTemperatures.main.temp_max),
         }
-
 
         return temperatures;
     }

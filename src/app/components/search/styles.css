@@ -11,7 +11,7 @@
     position: absolute;
 }
 
-#input-search:focus > #image-search {
+#input-search:focus>#image-search {
     display: none;
 }
 
@@ -29,5 +29,5 @@
         -5px 5px 12px 0px rgba(194, 194, 194, 0.20),
         -1px -1px 1px 0px rgba(194, 194, 194, 0.50) inset,
         1px 1px 2px 0px rgba(255, 255, 255, 0.30) inset;
-        text-align: center;
+    text-align: center;
 }
