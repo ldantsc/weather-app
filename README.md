@@ -13,7 +13,7 @@ Venho apresentar um projeto que criei, um simples Widget de previsão do tempo, 
 * Temperatura Atual
 * Cidade e Estado
 
-`Para utilizar é simples, digite o nome da cidade/estado na caixa de pesquisa, espere alguns segundos que ele irá te trazer o resultado !`
+**Para utilizar é simples, digite o nome da cidade/estado na caixa de pesquisa, espere alguns segundos que ele irá te trazer o resultado !**
 
 ## O que foi utilizado neste projeto
 
