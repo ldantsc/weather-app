@@ -6,7 +6,7 @@ const inter = Lato({ subsets: ['latin'], variable: "--font-lato", weight: "400" 
 
 export const metadata: Metadata = {
   title: 'Weather App',
-  description: 'Weather App create by dants.dev',
+  description: 'WeatherApp create by dants.dev using OpenWeather API',
 }
 
 export default function RootLayout({
