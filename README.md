@@ -1,4 +1,8 @@
 <h1 align="center">Weather Project</h1>
+<div align="center">
+<img src="https://github.com/ldantsc/weather-app/blob/main/public/favicon.ico"></img>
+</div>
+  
 
 Venho apresentar um projeto que criei, um simples Widget de previsão do tempo, que nos da algumas das informações que irei mencionar abaixo:
 
