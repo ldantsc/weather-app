@@ -44,6 +44,7 @@ Utilizei algumas tecnologias e recursos que irei listar abaixo:
 * NextJs
 * framer-motion
 * react-spinners
+* Tailwind CSS
 
 <h4>API's</h4>
 
@@ -64,5 +65,29 @@ Utilizei algumas tecnologias e recursos que irei listar abaixo:
 
 ## Objetivo do Projeto
 
-t
+O principal objetivo pessoal deste meu projeto, foi colocar em pratica a minha lógica/estudos para chegar no resultado esperado de um simples widget de previsão do tempo e se familiarizar com as tecnologias que utilizei... Achei essa API através de um repositório que consiste em mostrar API's publicas para os desenvolvedores, clique [aqui](https://github.com/public-apis/public-apis) para visualizar este repositório que eu citei.
+
+*Porque utilizei Framework como o NextJs para um projeto simples?*
+
+O intuito é como mencionei acima, por mais que seja um projeto pequeno, quero ter o maximo de familiaridade de utilizar o React/NextJs, descobrir melhores formas de trabalhar com componentes, Hooks, configuração de projeto, variaveis de ambiente e etc.
+
+*Passou alguma dificuldade durante o projeto?*
+
+Sim! foram diversas dificuldades, uma delas com os Hooks, poís no momento tenho uma certa dificuldade em como obter um certo resultado utilizando useState e useEffects (ex: implementar o input sem botão), com certeza irei estudar e colocar em pratica sobre isso... Outras dificuldades foram como buscar as coordenadas do usuário e como aplica-la com a API Weather se caso o usuário não forneça uma informação no input e ele queria ver as atualizações de temperaturas da sua localização em tempo real. Claro, tive que buscar bastante informações e ferramentas na web e como aplica-las, mas tentei também "quebrar a cabeça" para melhorar minha lógica de programação. 
+
+*Considerações finais*
+
+Fiquei bem feliz com este projeto, demorei 8 dias para chegar neste resultado de hoje e considero mais um passo dado nesta área. Utilizei ferramentas que antes eu não conhecia ou utilizei com o TailWindCSS, react-spinners, fui em busca de outras alternativas também mas que deixei de lado pois não se aplicava nesse projeto, li bastante documentação mais do que procurei por video-aulas, por exemplo, eu ja tenho uma base bacana com o Bootstrap, mas optei por utilizar o TailwindCSS, porque além dele vir padrão no NextJS, queria conhecer na pratica.
+
+## Conclusão
+
+Se você chegou até aqui, fico muito agradecido por ver meu projeto! Estou aberto a sugestões sobre como posso estar melhorando ou o que eu poderia ter feito melhor aqui. Por enquanto é isso! Me siga no LinkedIn que irei segui-lo de volta! Thanks!
+
+🚀🚀
+
+
+
+
+
+
 
