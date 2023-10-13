@@ -3,8 +3,9 @@
 </div>
 
 <h1 align="center">Weather Project</h1>
-  
 
+<br>
+  
 Venho apresentar um projeto que criei, um simples Widget de previsão do tempo, que nos da algumas das informações que irei mencionar abaixo:
 
 * Descrição do Tempo atual
@@ -15,6 +16,8 @@ Venho apresentar um projeto que criei, um simples Widget de previsão do tempo, 
 * Cidade e Estado
 
 **Para utilizar é simples, digite o nome da cidade/estado na caixa de pesquisa, espere alguns segundos que ele irá te trazer o resultado !**
+
+<br>
 
 ## O que foi utilizado neste projeto
 
