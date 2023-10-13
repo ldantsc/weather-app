@@ -32,4 +32,4 @@ export async function userLocale(): Promise<unknown> {
             reject("A geolocalização não disponivel");
         }
     });
-}
+};
