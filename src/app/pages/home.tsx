@@ -1,7 +1,6 @@
 "use client"
 import { useState, useEffect } from 'react'
 import { WeatherApi } from "../services/WeatherApi"
-import { motion } from "framer-motion";
 import Loader from '../components/loading/loading'
 import Weather from "../components/weather/weather"
 import Search from "../components/search/search"
@@ -14,7 +13,6 @@ export default function Home() {
   const [submitValue, setSubmitValue] = useState('');
   const [temperatures, setTemperatures] = useState(null);
   const [removeLoading, setRemoveLoading] = useState(false);
-
 
   useEffect(() => {
 

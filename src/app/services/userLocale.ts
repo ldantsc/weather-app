@@ -12,7 +12,7 @@ export async function userLocale(): Promise<unknown> {
 
                     /* Google Geolocation API Reverse */
 
-                    const apiGoogleKey = "AIzaSyBdmcdipKvU6LDZkcTajnSLp7l3pq1D3mQ"
+                    const apiGoogleKey = process.env.GOOGLE_API_KEY
                     const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&result_type=administrative_area_level_1&key=${apiGoogleKey}`);
                     const data = await response.json();
 

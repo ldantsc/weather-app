@@ -5,9 +5,9 @@ export class WeatherApi {
     _city: string
     _key: string
 
-    constructor(city: string) {
+    constructor(city: string, key: any = process.env.WEATHER_API_KEY) {
         this._city = city;
-        this._key = "dae1470781a876b1e32c0d552970e76e";
+        this._key = key;
     }
 
     /* Conversor Kelvin para Celsius*/
