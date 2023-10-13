@@ -2,21 +2,21 @@
 
 export function setImageWeather(props: string) {
     if (props === '01d') {
-        return './clear_day.svg'
+        return '/clear_day.svg'
     } else if (props === '01n') {
-        return './clear_night.svg'
+        return '/clear_night.svg'
     } else if (props === '02d' || props === '03d' || props === '04d') {
-        return './clouds_day.svg'
+        return '/clouds_day.svg'
     } else if (props === '02n' || props === '03n' || props === '04n') {
-        return './clouds_night.svg'
+        return '/clouds_night.svg'
     } else if (props === '09d' || props === '10d' || props === '09n' || props === '10n') {
-        return './rain.svg'
+        return '/rain_all.svg'
     } else if (props === '11d' || '11n') {
-        return './thunderstorm.svg'
+        return '/thunderstorm.svg'
     } else if (props === '13d' || '13n') {
-        return './snow.svg'
+        return '/snow.svg'
     } else {
-        return './mist.png'
+        return '/mist.png'
     }
 }
 
