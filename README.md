@@ -4,7 +4,6 @@
 
 <h1 align="center">Weather Project</h1>
 
-<br>
 
 <div align="center">
 
