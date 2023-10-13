@@ -38,7 +38,7 @@ export default function Home() {
       <div id="container-header">
         <Search value={cityValue} event={function event(e: any) { setCityValue(e.target.value) }} />
       </div>
-      <div id="container-weather" className="row-span-1">
+      <div id="container-weather-content" className="row-span-1">
         {temperatures && typeof temperatures === 'object' && 'city' in temperatures && (
           <Weather data={temperatures} />
         )}
