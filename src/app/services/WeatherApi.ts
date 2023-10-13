@@ -107,6 +107,7 @@ export class WeatherApi {
             maxTemperature: this.convertTemperatureFahrenheitToCelsius(localTemperatures.main.temp_max),
             airPollution: airCondition.main.aqi
         }
+        console.log(temperatures)
 
         return temperatures;
 

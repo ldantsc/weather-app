@@ -11,13 +11,12 @@ export function setImageWeather(props: string) {
         return '/clouds_night.svg'
     } else if (props === '09d' || props === '10d' || props === '09n' || props === '10n') {
         return '/rain_all.svg'
-    } else if (props === '11d' || '11n') {
+    } else if (props === '11d' || props === '11n') {
         return '/thunderstorm.svg'
-    } else if (props === '13d' || '13n') {
+    } else if (props === '13d' || props === '13n') {
         return '/snow.svg'
-    } else {
-        return '/mist.png'
     }
+    return './mist.svg'
 }
 
 /* Mudar cor de acordo com a poluição do ar (data.airPollution) */
