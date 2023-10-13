@@ -27,13 +27,19 @@ Venho apresentar um projeto que criei, um simples Widget de previsão do tempo, 
 
 Utilizei algumas tecnologias e recursos que irei listar abaixo:
 
+<h4>Basics</h4>
+
+* Typescript
+* CSS3
+* HTML5
+
 <h4>Frameworks e bibliotecas</h4>
 
 * NextJs
-* Typescript
-* Framer-Motion
+* framer-motion
+* react-spinners
 
-<h4>API</h4>
+<h4>API's</h4>
 
 [Weather API - OpenWeatherMap](https://openweathermap.org/api)
 

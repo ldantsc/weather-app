@@ -18,6 +18,7 @@ export async function userLocale(): Promise<unknown> {
 
                     const localUser = {
                         city: data.results[0].address_components[0].long_name,
+                        state: data.results[0].address_components[0].short_name,
                         latitude: position.coords.latitude,
                         longitude: position.coords.longitude
                     }
@@ -28,7 +29,7 @@ export async function userLocale(): Promise<unknown> {
                 }
             );
         } else {
-            reject("A geolocalização não é suportada pelo seu navegador.");
+            reject("A geolocalização não disponivel");
         }
     });
 }

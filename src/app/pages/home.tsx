@@ -1,6 +1,8 @@
 "use client"
 import { useState, useEffect } from 'react'
 import { WeatherApi } from "../services/WeatherApi"
+import { motion } from "framer-motion";
+import Loader from '../components/loading/loading'
 import Weather from "../components/weather/weather"
 import Search from "../components/search/search"
 import Footer from "../components/footer/footer"
@@ -11,14 +13,19 @@ export default function Home() {
   const [cityValue, setCityValue] = useState('');
   const [submitValue, setSubmitValue] = useState('');
   const [temperatures, setTemperatures] = useState(null);
+  const [removeLoading, setRemoveLoading] = useState(false);
 
 
   useEffect(() => {
 
     const timer = setTimeout(() => {
       setSubmitValue(cityValue);
+      setRemoveLoading(true)
     }, 2000);
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      setRemoveLoading(false)
+    }
   }, [cityValue]);
 
   useEffect(() => {
@@ -38,6 +45,7 @@ export default function Home() {
       <div id="container-header">
         <Search value={cityValue} event={function event(e: any) { setCityValue(e.target.value) }} />
       </div>
+        {!removeLoading && <Loader />}
       <div id="container-weather-content" className="row-span-1">
         {temperatures && typeof temperatures === 'object' && 'city' in temperatures && (
           <Weather data={temperatures} />

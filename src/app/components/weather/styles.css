@@ -1,8 +1,10 @@
 #weather {
-    background: linear-gradient(135deg, #FFF -14%, #E8E8E8 100%);
-    box-shadow: 6px 6px 14px 0px rgba(212, 212, 212, 0.90),
-        -6px -6px 11.70828px 0px #FFF, 6px -6px 12px 0px rgba(212, 212, 212, 0.20),
-        -6px 6px 12px 0px rgba(212, 212, 212, 0.20)
+
+    box-shadow: 8px 8px 20px 0px rgba(216, 216, 216, 0.90),
+        -8px -8px 16px 0px rgba(255, 255, 255, 0.90),
+        8px -8px 16px 0px rgba(216, 216, 216, 0.20),
+        -8px 8px 16px 0px rgba(216, 216, 216, 0.20),
+        0px 1px 10px 0px var(--background-air-pollution);
 }
 
 #describe-weather {
