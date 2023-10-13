@@ -5,6 +5,11 @@
 <h1 align="center">Weather Project</h1>
 
 <br>
+
+<div align="center">
+    [Site do Projeto](https://weather-app-ldantsc.vercel.app/)
+</div>
+
   
 Venho apresentar um projeto que criei, um simples Widget de previsão do tempo, que nos da algumas das informações que irei mencionar abaixo:
 
@@ -49,3 +54,12 @@ Utilizei algumas tecnologias e recursos que irei listar abaixo:
 [Google API](https://console.cloud.google.com/marketplace/product/google/geolocation.googleapis.com?q=search&referrer=search&hl=pt-br&project=geolocalizacao-401613)
 
 * Geolocation API - Reverse
+
+<h4>Deploy</h4>
+
+* Vercel
+
+<br>
+
+## Objetivo do Projeto
+
