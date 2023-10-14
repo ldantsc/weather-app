@@ -73,11 +73,11 @@ O intuito é como mencionei acima, por mais que seja um projeto pequeno, quero t
 
 *Passou alguma dificuldade durante o projeto?*
 
-Sim! foram diversas dificuldades, uma delas com os Hooks, poís no momento tenho uma certa dificuldade em como obter um certo resultado utilizando useState e useEffects (ex: implementar o input sem botão), com certeza irei estudar e colocar em pratica sobre isso... Outras dificuldades foram como buscar as coordenadas do usuário e como aplica-la com a API Weather se caso o usuário não forneça uma informação no input e ele queria ver as atualizações de temperaturas da sua localização em tempo real. Claro, tive que buscar bastante informações e ferramentas na web e como aplica-las, mas tentei também "quebrar a cabeça" para melhorar minha lógica de programação. 
+Sim! foram diversas dificuldades, uma delas com os Hooks, poís no momento tenho uma certa dificuldade em como obter um certo resultado utilizando useState e useEffects (ex: implementar o input sem botão), com certeza irei estudar e colocar em pratica sobre isso... Outras dificuldades foram como buscar as coordenadas do usuário e como aplica-la com a API Weather, se caso o usuário não fornecer uma cidade no input e eletrônico e caso o usuário queira ver as atualizações de temperaturas da sua localização em tempo real. Claro, tive que buscar bastante informações e ferramentas na web e como aplica-las, mas tentei também "quebrar a cabeça" para melhorar minha lógica de programação. 
 
-*Considerações finais*
+*Considerações finais...*
 
-Fiquei bem feliz com este projeto, demorei 8 dias para chegar neste resultado de hoje e considero mais um passo dado nesta área. Utilizei ferramentas que antes eu não conhecia ou utilizei com o TailWindCSS, react-spinners, fui em busca de outras alternativas também mas que deixei de lado pois não se aplicava nesse projeto, li bastante documentação mais do que procurei por video-aulas, por exemplo, eu ja tenho uma base bacana com o Bootstrap, mas optei por utilizar o TailwindCSS, porque além dele vir padrão no NextJS, queria conhecer na pratica.
+Fiquei bem feliz com este projeto, demorei 8 dias para chegar neste resultado de hoje e considero que dei mais um passo dado nesta área do desenvolvimento Web. Utilizei recursos que antes eu não conhecia como TailWindCSS, react-spinners, fui em busca de outras alternativas também mas que deixei de lado pois não se aplicava nesse projeto, li bastante documentação mais do que procurei por video-aulas, por exemplo, eu ja tenho uma base bacana com o Bootstrap, mas optei por utilizar o TailwindCSS, porque além dele vir padrão no NextJS, queria conhecer na pratica.
 
 ## Conclusão
 
